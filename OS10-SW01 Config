@@ -3,7 +3,7 @@ hostname OS10-SW01
 !
 interface mgmt 1/1/1
 no ip address dhcp
-ip address 192.168.20.121/24
+ip address 192.168.122.2/24
 exit
 !
 interface range ethernet 1/1/1-1/1/2
@@ -13,7 +13,7 @@ exit
 vlt-domain 1
 discovery-interface ethernet 1/1/1-1/1/2
 vlt-mac 0a:0b:0c:dd:ee:ff
-backup destination 192.168.20.122
+backup destination 192.168.122.3
 exit
 !
 interface vlan 200
