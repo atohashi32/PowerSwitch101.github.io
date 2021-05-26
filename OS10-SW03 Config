@@ -1,0 +1,20 @@
+configure terminal
+!
+hostname OS10-SW03
+!
+interface vlan 200
+exit
+!
+interface port-channel 10
+switchport mode trunk
+switchport trunk allowed vlan 200
+no shutdown
+exit
+!
+interface range ethernet 1/1/1-1/1/2
+channel-group 10 mode active
+no shutdown
+end
+!
+write memory
+!
